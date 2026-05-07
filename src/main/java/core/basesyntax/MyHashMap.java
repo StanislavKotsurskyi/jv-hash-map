@@ -86,7 +86,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         return Math.abs(key.hashCode() % capacity);
     }
 
-    class Node<K, V> {
+    private static class Node<K, V> {
         private K key;
         private V value;
         private Node<K, V> next;

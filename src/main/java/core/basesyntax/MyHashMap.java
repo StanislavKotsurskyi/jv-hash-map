@@ -65,8 +65,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         int oldCapacity = capacity;
         capacity += capacity;
         Node<K, V>[] oldTable = table;
-        Node<K, V>[] newTable = new Node[capacity];
-        table = newTable;
+        table = (Node<K, V>[]) new Node[capacity];
         for (int i = 0; i < oldCapacity; i++) {
             Node<K, V> node = oldTable[i];
 
